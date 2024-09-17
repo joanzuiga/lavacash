@@ -1,0 +1,52 @@
+<div th:include="page/header"></div>
+<div th:include="page/navbar"></div>
+
+<style>
+        body {
+        height: 100%;
+        background: #007bff;
+    }
+    .container {
+        max-width: 550px;
+    }
+</style>
+
+<div class="  row col-12">
+    <div class="col-12">
+        <div class="container mt-5">
+        <div class="card m-5">
+            <h5 class="card-header">Inicie Sesión</h5>
+            <div class="card-body">
+                <form th:action="@{/account/ingresar}" th:object="${user}" method="post">
+
+                    <div class="form-group">
+                        <label for="">Correo</label>
+                        <input type="text" class="form-control" th:field="*{correo}" aria-describedby="" placeholder="Ingrese correo electronico">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Contraseñá</label>
+                        <input type="text" class="form-control" th:field="*{contrasena}" placeholder="Ingrese la contraseña">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div>
+                    <p>No esta registrado?  <a th:href="@{/account/register}">Cree una cuenta</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="container ">
+                <div class="row">
+                    <div class="col text-center">
+                        <button class="btn btn-default bg-primary text-white">Opiniones de nuestros clientes</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div th:include="page/header"></div>
+<div th:include="page/navbar"></div>
+
+<h1>Lista de Servicios</h1>
+<div class="mx-auto container border border-dark rounded ">
+    
+    <!-- TABLA INICIA -->
+    <table class="table" 
+           id="tableBody">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <!-- TABLA FINALIZA -->
+    
+</div>
+
+
+
+<script type="text/javascript" th:src="@{/js/servicio/servicio_listar.js}"></script>
+<!--
+<div th:include="page/footer"></div>
+-->

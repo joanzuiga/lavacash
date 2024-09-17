@@ -1,0 +1,68 @@
+<div th:include="page/header"></div>
+<div th:include="page/navbar"></div>
+
+<div class="row col-12">
+    <div class="col-6 bg-primary">
+        <div class="card m-5">
+            <h5 class="card-header">Crear Cuenta</h5>
+            <div class="card-body">
+                <form th:action="@{/account/save}" th:object="${user}" method="post">
+
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control" th:field="*{nombre}" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Apellido</label>
+                        <input type="text" class="form-control" th:field="*{apellido}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Correo</label>
+                        <input type="email" class="form-control" th:field="*{correo}">
+                    </div>
+
+                    <div class="">
+                        <label for="">Telefono</label>
+                        <input type="text" class="form-control" th:field="*{telefono}">
+                    </div>
+
+                    <div class="">
+                        <label for="">Direccion</label>
+                        <textarea type="text" class="form-control" th:field="*{direccion}"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Contraseña</label>
+                        <input type="text" class="form-control" th:field="*{contrasena}">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+
+                </form>
+
+                <div>
+                    <p>Ya tiene una cuenta?  <a th:href="@{/account/login}">Inicie sesión</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-6 container-fluid">
+        <div class="row">
+            <img th:src="@{../images/icon2.png}" />
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-default bg-primary text-white">Calificanos, Agrega un comentario</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div th:include="page/footer"></div>
